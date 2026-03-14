@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="CafeYara – Browse our menu as an interactive flipbook" />
+  <title>CafeYara Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay">
+    <div class="loader-wrap">
+      <div class="spinner"></div>
+      <p id="loading-text">Opening menu…</p>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <header id="site-header">
+    <h1 class="logo">CafYara</h1>
+    <span class="tagline">Our Menu</span>
+  </header>
+
+  <!-- Flipbook Wrapper -->
+  <main id="flipbook-wrap">
+    <button id="btn-prev" class="nav-btn" aria-label="Previous page">&#8592;</button>
+
+    <div id="flipbook-stage">
+      <div id="flipbook"></div>
+    </div>
+
+    <button id="btn-next" class="nav-btn" aria-label="Next page">&#8594;</button>
+  </main>
+
+  <!-- Page Counter -->
+  <footer id="page-counter">
+    <span id="counter-text">Page 1</span>
+  </footer>
+
+  <!-- Hint toast (shows once) -->
+  <div id="hint-toast">
+    <span>👆 Swipe or drag to flip pages</span>
+  </div>
+
+  <script src="libs/pdf.min.js"></script>
+  <script src="libs/page-flip.browser.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
